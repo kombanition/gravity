@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="CodeDraw" level="project" />
+    <orderEntry type="library" name="codedraw" level="project" />
   </component>
 </module>

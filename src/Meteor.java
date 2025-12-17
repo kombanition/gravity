@@ -1,3 +1,4 @@
+import codedraw.CodeDraw;
 /**
  * Movable mass.
  */
@@ -18,7 +19,7 @@ public class Meteor implements Drawable{
     }
 
     @Override
-    public void draw(codedraw.CodeDraw cd) {
+    public void draw(CodeDraw cd) {
         cd.drawCircle(pos.getX(), pos.getY(), mass);
     }
 }

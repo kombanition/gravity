@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="codedraw">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Desktop/lib/java-libs/CodeDraw.jar!/codedraw" />
+      <root url="jar://$USER_HOME$/Desktop/lib/java-libs/CodeDraw.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

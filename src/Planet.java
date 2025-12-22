@@ -21,4 +21,9 @@ public class Planet implements Drawable{
     public void draw(CodeDraw cd) {
         cd.drawCircle(pos.getX(), pos.getY(), mass);
     }
+
+    @Override
+    public void move(Vector a) {
+        return;
+    }
 }

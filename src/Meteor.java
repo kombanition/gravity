@@ -21,5 +21,15 @@ public class Meteor implements Drawable{
     @Override
     public void draw(CodeDraw cd) {
         cd.drawCircle(pos.getX(), pos.getY(), mass);
+        step();
+    }
+
+    @Override
+    public void move(Vector a) {
+        v = new Vector(v.getX() + a.getX(), v.getY()+ a.getY());
+    }
+
+    public void step() {
+        pos = new Vector(pos.getX() + v.getX(), pos.getY() + v.getY());
     }
 }

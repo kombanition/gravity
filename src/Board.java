@@ -27,6 +27,19 @@ public class Board {
         cd.show();
     }
 
+    public void calculateAllForces(){
+        for(Drawable d : comps){
+            Vector movement = new Vector(0,0);
+            for(Drawable m : comps){
+                if(d.equals(m)){
+                    continue;
+                }
+                movement.add(d.getForce(m));
+            }
+            d.move(movement);
+        }
+    }
+
     // Method for gravity interaction between objects
 
 

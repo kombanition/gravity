@@ -21,4 +21,22 @@ public class Vector {
     public double getY(){
         return y;
     }
+
+    public double getLength(){
+        return Math.sqrt(Math.pow(x, 2) + Math.pow(y,2));
+    }
+
+    public void add(Vector v){
+        x += v.getX();
+        y += v.getY();
+    }
+
+    public void scale(double s){
+        x = x * s;
+        y = y * s;
+    }
+
+    public Vector getUnitVector(){
+        return new Vector(x/getLength(), y/getLength());
+    }
 }

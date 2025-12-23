@@ -26,4 +26,13 @@ public class Planet implements Drawable{
     public void move(Vector a) {
         return;
     }
+
+    public double getMass(){
+        return mass;
+    }
+
+    @Override
+    public Vector getForce(Drawable d) {
+        return new Vector(0, 0);
+    }
 }

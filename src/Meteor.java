@@ -32,4 +32,30 @@ public class Meteor implements Drawable{
     public void step() {
         pos = new Vector(pos.getX() + v.getX(), pos.getY() + v.getY());
     }
+
+    public double getMass(){
+        return mass;
+    }
+
+    /**
+     *
+     * @param d
+     * @return a vector with direction towards d
+     */
+    public Vector getDirection(Drawable d){
+        return new Vector(d.getPos().getX() - pos.getX(), d.getPos().getY() - pos.getY());
+    }
+
+    /**
+     *
+     * @param d
+     * @return the force d exerts on this
+     */
+     public Vector getForce(Drawable d){
+         Vector retVector = getDirection(d);
+         Double scalar = (mass * d.getMass())/(Math.pow(retVector.getLength(), 2));
+         retVector = retVector.getUnitVector();
+         retVector.scale(scalar);
+        return retVector;
+    }
 }

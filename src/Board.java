@@ -5,32 +5,32 @@ import java.util.ArrayList;
  * Stores all things getting drawn.
  */
 public class Board {
-    private ArrayList<Drawable> comps;
+    private ArrayList<Body> comps;
 
-    public Board(Drawable... comps){
+    public Board(Body... comps){
         this.comps = new ArrayList<>();
-        for(Drawable c : comps){
+        for(Body c : comps){
             this.comps.add(c);
         }
     }
 
-    public void add(Drawable... comps){
-        for(Drawable c : comps){
+    public void add(Body... comps){
+        for(Body c : comps){
             this.comps.add(c);
         }
     }
 
     public void drawAll(CodeDraw cd){
-        for(Drawable d : comps){
+        for(Body d : comps){
             d.draw(cd);
         }
         cd.show();
     }
 
     public void calculateAllForces(){
-        for(Drawable d : comps){
+        for(Body d : comps){
             Vector movement = new Vector(0,0);
-            for(Drawable m : comps){
+            for(Body m : comps){
                 if(d.equals(m)){
                     continue;
                 }

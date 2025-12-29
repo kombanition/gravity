@@ -1,5 +1,6 @@
 import codedraw.CodeDraw;
-import com.sun.jdi.request.MethodEntryRequest;
+
+// TODO: Mindestabstand, Velet-Integration, Refactoring
 
 public class Run {
     static void main(){
@@ -10,11 +11,11 @@ public class Run {
         int win_size = 800;
         CodeDraw cd = new CodeDraw(win_size, win_size);
         Board b = new Board();
-        Meteor m1 = new Meteor(new Vector(200, 200), new Vector(1, 0), 20);
-        Meteor m2 = new Meteor(new Vector(400, 400), new Vector(-1, 0), 30);
-        Meteor m3 = new Meteor(new Vector(300, 50), new Vector(0, 0), 10);
-
-        b.add(m1, m2, m3);
+        //Planet m1 = new Planet(new Vector(100, 100), new Vector(0, 0), 20);
+        // Planet m2 = new Planet(new Vector(600, 300), new Vector(1, 0), 30);
+        Planet m3 = new Planet(new Vector(50, 100), new Vector(0, 2), 200);
+        Planet m4 = new Planet(new Vector(300, 300), new Vector(0, 0.1), 1800);
+        b.add(m3, m4);
 
         int fps = 60;
         long targetTime = 1000 / fps;
